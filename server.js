@@ -15,10 +15,9 @@ app.get('/api/whoami', (req, res) => {
   const languages = req.acceptsLanguages();
   const userAgent = req.get('user-agent');
   
-  res.setHeader('Content-Type', 'application/json');
   res.json({
-    ipaddress: IP,
-    language: languages[0],
+    ipaddress: IP.split(',')[0],
+    language: languages.join(','),
     software: userAgent.substring(userAgent.indexOf('(') + 1, userAgent.indexOf(')'))
   });
 });
