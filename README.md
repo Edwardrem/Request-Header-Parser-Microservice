@@ -1,27 +1,10 @@
-Welcome to Glitch
-=================
+# API Project: Request Header Parser Microservice for freeCodeCamp
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+### User stories:
+1. I can get the IP address, preferred languages (from header `Accept-Language`) and system infos (from header `User-Agent`) for my device.
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+#### Example usage:
+* [base_url]/api/whoami
 
-Find out more [about Glitch](https://glitch.com/about).
-
-
-Your Project
-------------
-
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+#### Example output:
+* `{"ipaddress":"159.20.14.100","language":"en-US,en;q=0.5","software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}`

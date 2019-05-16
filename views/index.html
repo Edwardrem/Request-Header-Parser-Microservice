@@ -1,58 +1,36 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Welcome to Glitch!</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <h1>
-        A Dream of the Future
-      </h1>
-    </header>
+<html>
 
-    <main>
-      <p class="bold">Oh hi,</p>
-      
-      <p>Tell me your hopes and dreams:</p>
-      
-      <form>
-        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button type="submit" id="submit-dream">Submit Dream</button>
-      </form>
-      
-      <section class="dreams">
-        <ul id="dreams"></ul>
-      </section>
-    </main>
+   <head>
+      <title>Request Header Parser</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="style.css" rel="stylesheet" type="text/css">
+   </head>
 
-    <footer>
-      Made with <a href="https://glitch.com">Glitch</a>!
-    </footer>
+   <body>
+      <div class="container">
+        <h2>API Project: Request Header Parser Microservice</h2>
+        <h3>User Story: </h3>
+        1. I can get the IP address, preferred languages (from header <code>Accept-Language</code>)<br> and system infos (from header <code>User-Agent</code>) for my device.
 
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
+        <h3>Example Usage:</h3>
+        <p>
+          [base url]/api/whoami
+        </p>
 
-  </body>
+        <h3>Example Output:</h3>
+        <p>
+          <code>{"ipaddress":"::ffff:159.20.14.100","language":"en-US,en;q=0.5",<br>"software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}</code>
+        </p>
+      </div>
+      <div class="footer">
+        <p>
+          by <a href="http://www.freecodecamp.com">freeCodeCamp</a> | <a href="https://hyperdev.com/#!/remix/FCC_API_header_bplate/8c449aa9-a80c-47ad-8142-8da90f658731">Click here to Remix</a>
+        </p>
+      </div>
+   </body>
+
+
 </html>
